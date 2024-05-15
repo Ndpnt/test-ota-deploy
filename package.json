@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "license": "AGPL-3.0",
+  "scripts": {
+    "start:api": "ota serve",
+    "start:federation-api": "ota-federation-api serve"
+  },
+  "dependencies": {
+    "@opentermsarchive/engine": "OpenTermsArchive/engine#restructure-configuration",
+    "@opentermsarchive/federation-api": "OpenTermsArchive/federation-api#package"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "@opentermsarchive/engine": {
+    "recorder": {
+      "versions": {
+        "storage": {
+          "git": {
+            "snapshotIdentiferTemplate": "https://github.com/OpenTermsArchive/sandbox-snapshots/commit/%SNAPSHOT_ID",
+            "repository": "git@github.com:OpenTermsArchive/sandbox-versions.git",
+            "path": "./data/versions",
+            "publish": false
+          }
+        }
+      },
+      "snapshots": {
+        "storage": {
+          "git": {
+            "path": "./data/snapshots",
+            "publish": false
+          }
+        }
+      }
+    },
+    "fetcher": {
+      "language": "en"
+    },
+    "notifier": {
+      "sendInBlue": {
+        "updatesListId": 0,
+        "updateTemplateId": 0
+      }
+    },
+    "reporter": {
+      "githubIssues": {
+        "repositories": {
+          "declarations": "OpenTermsArchive/sandbox-declarations",
+          "versions": "OpenTermsArchive/sandbox-versions",
+          "snapshots": "OpenTermsArchive/sandbox-snapshots"
+        }
+      }
+    },
+    "dataset": {
+      "title": "sandbox",
+      "versionsRepositoryURL": "https://github.com/OpenTermsArchive/sandbox-versions"
+    },
+    "collection-api": {
+      "port": 3000,
+      "basePath": "/collection-api"
+    }
+  },
+  "@opentermsarchive/federation-api": {
+    "port": 3003,
+    "basePath": "/federation-api"
+  }
+}
